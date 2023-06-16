@@ -1,0 +1,11 @@
+body {
+    text-align: center;
+    color: lightblue;
+    background-color: black;
+}
+
+.output {
+    border: 3px solid white;
+    margin-top: 20px;
+    display: none;
+}
