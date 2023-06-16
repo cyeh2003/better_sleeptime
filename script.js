@@ -14,7 +14,7 @@ function createWakeUpTimeElement(time, cycle) {
     return elm;
 }
 
-function handleOnClickEvent() {
+function handleOnClick() {
     let output = document.querySelector(".output");
     output.style.display = "block";
 
@@ -29,9 +29,12 @@ function handleOnClickEvent() {
     now.setHours(hh);
     now.setMinutes(mm);
 
-    for (let i = 0; i < 6; i) {
+    for (let i = 1; i <= 6; i++) {
         now.setMinutes(now.getMinutes() + 90);
-        const elm = createWakeUpTimeElement(now.toLocaleTimeString("en-US", { timeStyle: "short" }) , i)
+        const elm = createWakeUpTimeElement(
+            now.toLocaleTimeString("en-US", { timeStyle: "short" }),
+            i
+          )
         hours.appendChild(elm);
     }
 }
